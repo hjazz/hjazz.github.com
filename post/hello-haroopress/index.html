@@ -156,7 +156,7 @@
 
                         <div class="markdown-wrapper">
                             <h1 id="toc_0">하루프레스 설치</h1>
-<p>make init 을 하면 node module 설치하다가 permission error가 발생한다.</p><p>sudo 로 설치</p><p>이후 make new-post를 하면 역시 permission error </p><p>haroopressDirectory/source/data 이하가 전부 root 소유라서 chown으로 소유권 변경</p><p>다시 make new-post로 글쓰기 완료.</p><p>permission error는 노드를 설치할 때 node.js에서 패키지 설치를 했기 때문이다.</p><p>패키지 설치를 하면 <code>/usr/local/bin</code> 에 설치가 되고 <code>/usr/local</code> 이 root로 되어있으면 노드 모듈 설치시 권한 문제가 생긴다.</p><p>그래서 node.js를 패키지 설치하지 않고 nvm으로 사용자의 홈디렉토리에 설치했다.</p><p>nvm으로 설치한 노드를 사용하기 위해서는 쉘을 시작할 때마다 nvm.sh를 실행해주어야 하는데 그게 귀찮으므로 .profile에 추가해준다.</p>
+<p>&#39;make init&#39; 을 하면 node module 설치하다가 permission error가 발생한다.</p><p>sudo 로 설치</p><p>이후 &#39;make new-post&#39;를 하면 역시 permission error </p><p>&#39;/source/data&#39; 이하가 전부 root 소유라서 chown으로 소유권 변경</p><p>다시 &#39;make new-post&#39;로 글쓰기 완료.</p><p>permission error는 노드를 설치할 때 node.js에서 패키지 설치를 했기 때문이다.</p><p>패키지 설치를 하면 <code>/usr/local/bin</code> 에 설치가 되고 <code>/usr/local</code> 이 root로 되어있으면 노드 모듈 설치시 권한 문제가 생긴다.</p><p>그래서 node.js를 패키지 설치하지 않고 nvm으로 사용자의 홈디렉토리에 설치했다.</p><p>nvm으로 설치한 노드를 사용하기 위해서는 쉘을 시작할 때마다 nvm.sh를 실행해주어야 하는데 그게 귀찮으므로 .profile에 추가해준다.</p>
                         </div>
                         <hr />
                                             
