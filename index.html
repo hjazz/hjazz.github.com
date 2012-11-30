@@ -53,6 +53,8 @@
 
           <a class="pull-right" href="/rss.xml"><img src="/img/buttons/rss.png" /></a>
           
+            <a class="pull-right" href="http://twitter.com/hjazz" target="_blank"><img src="/img/buttons/twitter.png" /></a>
+          
 
           <div class="nav-collapse">
             <ul class="nav">
@@ -113,6 +115,24 @@
     </div>
     
                 
+        <div class="well _github_repo">
+            <div class="pull-right">
+                <a href="/github"><i class="icon-info-sign"></i></a>
+            </div>
+            <h6>github.com repositories</h6>
+            <div class="progress progress-info progress-striped active">
+                <div class="bar" style="width: 10%;"></div>
+            </div>
+        </div>
+        <script>
+            github({
+                user: 'hjazz',
+                count: 10,
+                skipForks: true,
+                target: '._github_repo'
+            });
+        </script>
+    
 
             
 <div class="well">
@@ -147,6 +167,27 @@
 </div>
 
             
+    <div id="__weather" class="pull-right"></div>
+
+    <script src="/js/jquery.simpleWeather-2.0.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.simpleWeather({
+                zipcode: 'KSXX0037',
+                unit: 'f',
+                success: function(weather) {
+                    $("#__weather").html('<img src="'+ weather.image +'">');
+                },
+                error: function(error) {
+                        $("#__weather").html("<p>"+error+"</p>");
+                }
+            });
+
+            $('#__weather').css({ position: 'absolute', marginTop:-30, left: 30 }).stop().fadeIn().animate({ opacity: 0 }, 1);
+
+        });
+    </script>
+
         </div>
         <div class="span9">
             
@@ -227,6 +268,27 @@
                                 }());
                             </script>
 
+
+    <div id="__weather" class="pull-right"></div>
+
+    <script src="/js/jquery.simpleWeather-2.0.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.simpleWeather({
+                zipcode: 'KSXX0037',
+                unit: 'f',
+                success: function(weather) {
+                    $("#__weather").html('<img src="'+ weather.image +'">');
+                },
+                error: function(error) {
+                        $("#__weather").html("<p>"+error+"</p>");
+                }
+            });
+
+            $('#__weather').css({ position: 'absolute', marginTop:-30, left: 30 }).stop().fadeIn().animate({ opacity: 0 }, 1);
+
+        });
+    </script>
 
 
 
